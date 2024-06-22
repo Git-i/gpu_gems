@@ -1,0 +1,12 @@
+[package]
+name = "gpu_gems"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+
+[dependencies]
+vulkano = "0.34.1"
+renderer = { path = "renderer" }
+winit = "0.30.2"
+
