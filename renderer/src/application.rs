@@ -50,7 +50,7 @@ pub fn run_app(app: Application, ctx: Context) -> Context {
 }
 impl ApplicationHandler for ApplicationInternal
 {
-    fn resumed(&mut self, event_loop: &winit::event_loop::ActiveEventLoop) {
+    fn resumed(&mut self, _event_loop: &winit::event_loop::ActiveEventLoop) {
         
     }
 

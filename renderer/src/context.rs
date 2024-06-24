@@ -1,9 +1,9 @@
 use std::sync::Arc;
 
-use vulkano::{device::{physical::PhysicalDevice, Device, DeviceCreateInfo, DeviceExtensions, Features, QueueCreateInfo}, format::Format, image::{Image, ImageUsage}, instance::{Instance, InstanceCreateInfo}, swapchain::{self, ColorSpace, Surface, SurfaceInfo, Swapchain, SwapchainCreateInfo}, Version, VulkanLibrary};
-use winit::{dpi::{LogicalSize, PhysicalSize, Size}, event_loop::{ActiveEventLoop, EventLoop}, window::{Window, WindowAttributes}};
+use vulkano::{device::{physical::PhysicalDevice, Device, DeviceCreateInfo, DeviceExtensions, Features, QueueCreateInfo}, image::{Image, ImageUsage}, instance::{Instance, InstanceCreateInfo}, swapchain::{Surface, SurfaceInfo, Swapchain, SwapchainCreateInfo}, Version, VulkanLibrary};
+use winit::{dpi::{PhysicalSize, Size}, window::{Window, WindowAttributes}};
 
-use crate::application::{self, Application};
+use crate::application::Application;
 
 pub struct Context {
     device: Arc<Device>,
@@ -17,7 +17,7 @@ pub struct Context {
 }
 
 /// call this function to see if a physical device is acceptable by the renderer
-pub fn is_device_viable(device: &Arc<PhysicalDevice>) -> bool {
+pub fn is_device_viable(_device: &Arc<PhysicalDevice>) -> bool {
     //when we require more features this function will have effect
     true
 }
